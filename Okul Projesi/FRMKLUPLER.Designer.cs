@@ -53,10 +53,11 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 63);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(429, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(438, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // pictureBox1
@@ -98,6 +99,7 @@
             // 
             // txtkulupid
             // 
+            this.txtkulupid.Enabled = false;
             this.txtkulupid.Location = new System.Drawing.Point(158, 238);
             this.txtkulupid.Name = "txtkulupid";
             this.txtkulupid.Size = new System.Drawing.Size(271, 20);
@@ -118,6 +120,7 @@
             this.BtnListele.TabIndex = 7;
             this.BtnListele.Text = "LİSTELE";
             this.BtnListele.UseVisualStyleBackColor = true;
+            this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
             // pictureBox2
             // 
@@ -177,6 +180,7 @@
             this.BtnEkle.TabIndex = 11;
             this.BtnEkle.Text = "EKLE";
             this.BtnEkle.UseVisualStyleBackColor = true;
+            this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // FRMKLUPLER
             // 
@@ -201,7 +205,9 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRMKLUPLER";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRMKLUPLER";
+            this.Load += new System.EventHandler(this.FRMKLUPLER_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
