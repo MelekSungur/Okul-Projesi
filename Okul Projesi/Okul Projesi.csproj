@@ -52,19 +52,37 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMKLUPLER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMKLUPLER.Designer.cs">
+      <DependentUpon>FRMKLUPLER.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmOgrenciNotlar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmOgrenciNotlar.Designer.cs">
       <DependentUpon>FrmOgrenciNotlar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMOGRETMEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMOGRETMEN.Designer.cs">
+      <DependentUpon>FRMOGRETMEN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRMKLUPLER.resx">
+      <DependentUpon>FRMKLUPLER.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmOgrenciNotlar.resx">
       <DependentUpon>FrmOgrenciNotlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMOGRETMEN.resx">
+      <DependentUpon>FRMOGRETMEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

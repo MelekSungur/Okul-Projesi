@@ -17,18 +17,19 @@ namespace Okul_Projesi
         {
             InitializeComponent();
         }
-
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             FrmOgrenciNotlar fr=new FrmOgrenciNotlar();
-            fr.numara = TextBox1.Text;
+           fr.numara = TextBox1.Text;
             fr.Show();
+            
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
