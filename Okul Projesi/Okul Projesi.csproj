@@ -72,6 +72,12 @@
     <Compile Include="FRMKLUPLER.Designer.cs">
       <DependentUpon>FRMKLUPLER.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMOGRENCI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMOGRENCI.Designer.cs">
+      <DependentUpon>FRMOGRENCI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmOgrenciNotlar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRMKLUPLER.resx">
       <DependentUpon>FRMKLUPLER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMOGRENCI.resx">
+      <DependentUpon>FRMOGRENCI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOgrenciNotlar.resx">
       <DependentUpon>FrmOgrenciNotlar.cs</DependentUpon>

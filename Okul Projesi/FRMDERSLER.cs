@@ -17,11 +17,13 @@ namespace Okul_Projesi
         {
             InitializeComponent();
         }
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-D0LP1EG;Initial Catalog=Okul_Projesi;Integrated Security=True");
         DataSet1TableAdapters.TBLDERSLERTableAdapter DS = new DataSet1TableAdapters.TBLDERSLERTableAdapter();
 
         private void FRMDERSLER_Load(object sender, EventArgs e)
         {
           
+            
             dataGridView1.DataSource = DS.DersListesi();
         }
 

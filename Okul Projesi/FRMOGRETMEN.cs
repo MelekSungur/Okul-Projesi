@@ -35,5 +35,11 @@ namespace Okul_Projesi
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FRMOGRENCI fr=new FRMOGRENCI();
+            fr.Show();
+        }
     }
 }
