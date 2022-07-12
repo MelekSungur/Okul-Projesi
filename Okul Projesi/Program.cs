@@ -16,7 +16,7 @@ namespace Okul_Projesi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRMOGRETMEN());
+            Application.Run(new Form1());
         }
     }
 }

@@ -31,5 +31,11 @@ namespace Okul_Projesi
         {
            
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FRMOGRETMEN fr = new FRMOGRETMEN();
+            fr.Show();
+        }
     }
 }

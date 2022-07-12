@@ -22,5 +22,18 @@ namespace Okul_Projesi
             FRMKLUPLER frm = new FRMKLUPLER();
             frm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FRMDERSLER frm = new FRMDERSLER();
+            frm.Show();
+
+
+                }
+
+        private void FRMOGRETMEN_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

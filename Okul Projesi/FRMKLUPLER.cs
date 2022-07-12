@@ -49,5 +49,58 @@ namespace Okul_Projesi
             MessageBox.Show("Kulüp Kaydı Yapılmıştır", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             listele();
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox6_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox6.BackColor = Color.Red;
+        }
+
+        private void pictureBox6_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox6.BackColor = Color.Transparent;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtkulupid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtkulupad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand Sil = new SqlCommand("delete from TBLKULUPLER where KULUPID=@p1", baglanti);
+            Sil.Parameters.AddWithValue("@p1", txtkulupid.Text);
+            Sil.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Seçtiğiniz Kayıt Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            listele();
+
+           
+
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand guncelle = new SqlCommand("update TBLKULUPLER set KULUPAD=@P2 where KULUPID=@P1", baglanti);
+            guncelle.Parameters.AddWithValue("@P1",txtkulupid.Text);
+            guncelle.Parameters.AddWithValue("@P2", txtkulupad.Text);
+            guncelle.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Seçtiğiniz Kayıt Guncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            listele();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

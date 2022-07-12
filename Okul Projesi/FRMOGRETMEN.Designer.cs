@@ -56,6 +56,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "DERS İŞLEMLERİ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -167,6 +168,7 @@
             this.Name = "FRMOGRETMEN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRMOGRETMEN";
+            this.Load += new System.EventHandler(this.FRMOGRETMEN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
