@@ -130,6 +130,7 @@
             this.BtnGuncelle.TabIndex = 42;
             this.BtnGuncelle.Text = "GÜNCELLE";
             this.BtnGuncelle.UseVisualStyleBackColor = false;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // pictureBox3
             // 
@@ -329,6 +330,7 @@
             this.BtnAra.TabIndex = 51;
             this.BtnAra.Text = "ARA";
             this.BtnAra.UseVisualStyleBackColor = true;
+            this.BtnAra.Click += new System.EventHandler(this.BtnAra_Click);
             // 
             // pictureBox7
             // 

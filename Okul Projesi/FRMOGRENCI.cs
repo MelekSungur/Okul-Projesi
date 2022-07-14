@@ -49,14 +49,7 @@ namespace Okul_Projesi
         private void BtnEkle_Click(object sender, EventArgs e)
         {
         
-            if (Rdiokiz.Checked == true)
-            {
-                cinsiyet = "Kız";
-            }
-            if (Rdioerkek.Checked==true)
-            {
-                cinsiyet = "Erkek";
-            }
+           
             ds.OGRENCIEKLE(TxtAd.Text, TxtSoyad.Text, byte.Parse(CmbKulup.Text), cinsiyet);
             MessageBox.Show("Ders Kayıt Edildi");
         }
@@ -98,12 +91,19 @@ namespace Okul_Projesi
 
         private void Rdiokiz_CheckedChanged(object sender, EventArgs e)
         {
-           
+            if (Rdiokiz.Checked == true)
+            {
+                cinsiyet = "Kız";
+            }
+            
         }
 
         private void Rdioerkek_CheckedChanged(object sender, EventArgs e)
         {
-            
+            if (Rdioerkek.Checked == true)
+            {
+                cinsiyet = "Erkek";
+            }
         }
 
         private void label8_TextChanged(object sender, EventArgs e)
@@ -117,6 +117,21 @@ namespace Okul_Projesi
             {
                 Rdioerkek.Checked = true;
             }
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            ds.OGRENCIGUNCELLE(TxtAd.Text,TxtSoyad.Text,byte.Parse(CmbKulup.SelectedValue.ToString()),cinsiyet,int.Parse(Txtid.Text));
+        }
+
+        private void BtnAra_Click(object sender, EventArgs e)
+        {
+            SqlCommand bul = new SqlCommand("Select * From TBLOGRENCILER where OGRAD like '%" + TxtAra.Text + "%'", baglanti);
+            bul.Parameters.AddWithValue("@p1", TxtAra.Text);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(bul);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }
