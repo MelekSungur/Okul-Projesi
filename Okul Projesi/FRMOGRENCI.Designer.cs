@@ -59,6 +59,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataSet1 = new Okul_Projesi.DataSet1();
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -91,6 +92,7 @@
             this.BtnSil.TabIndex = 46;
             this.BtnSil.Text = "SİL";
             this.BtnSil.UseVisualStyleBackColor = false;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // pictureBox4
             // 
@@ -250,6 +252,7 @@
             this.Rdioerkek.TabStop = true;
             this.Rdioerkek.Text = "ERKEK";
             this.Rdioerkek.UseVisualStyleBackColor = true;
+            this.Rdioerkek.CheckedChanged += new System.EventHandler(this.Rdioerkek_CheckedChanged);
             // 
             // Rdiokiz
             // 
@@ -261,6 +264,7 @@
             this.Rdiokiz.TabStop = true;
             this.Rdiokiz.Text = "KIZ";
             this.Rdiokiz.UseVisualStyleBackColor = true;
+            this.Rdiokiz.CheckedChanged += new System.EventHandler(this.Rdiokiz_CheckedChanged);
             // 
             // CmbKulup
             // 
@@ -342,6 +346,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(824, 150);
             this.dataGridView1.TabIndex = 53;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // dataSet1
             // 
@@ -353,12 +359,25 @@
             this.dataSet1BindingSource.DataSource = this.dataSet1;
             this.dataSet1BindingSource.Position = 0;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Enabled = false;
+            this.label8.Location = new System.Drawing.Point(390, 390);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 20);
+            this.label8.TabIndex = 54;
+            this.label8.Text = "label8";
+            this.label8.Visible = false;
+            this.label8.TextChanged += new System.EventHandler(this.label8_TextChanged);
+            // 
             // FRMOGRENCI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(854, 442);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.BtnAra);
@@ -433,5 +452,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource dataSet1BindingSource;
+        private System.Windows.Forms.Label label8;
     }
 }

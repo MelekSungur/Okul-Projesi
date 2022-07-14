@@ -44,11 +44,11 @@ namespace Okul_Projesi
         {
 
         }
-
+        string cinsiyet =" " ;
 
         private void BtnEkle_Click(object sender, EventArgs e)
         {
-            string cinsiyet = " ";
+        
             if (Rdiokiz.Checked == true)
             {
                 cinsiyet = "Kız";
@@ -68,7 +68,55 @@ namespace Okul_Projesi
 
         private void CmbKulup_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Txtid.Text = CmbKulup.SelectedValue.ToString();
+            //Txtid.Text = CmbKulup.SelectedValue.ToString();
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            ds.OGRENCISIL(int.Parse(Txtid.Text));
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Txtid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            TxtAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            TxtSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            CmbKulup.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            label8.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+           
+            
+
+
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void Rdiokiz_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Rdioerkek_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label8_TextChanged(object sender, EventArgs e)
+        {
+            if (label8.Text == "kız")
+            {
+                Rdiokiz.Checked = true;
+
+            }
+            if (label8.Text == "erkek")
+            {
+                Rdioerkek.Checked = true;
+            }
         }
     }
 }

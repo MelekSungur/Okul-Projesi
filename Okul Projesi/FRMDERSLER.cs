@@ -54,6 +54,7 @@ namespace Okul_Projesi
         {
             txtkulupid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtkulupad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
@@ -61,6 +62,11 @@ namespace Okul_Projesi
             DS.DersGuncelle(txtkulupad.Text,byte.Parse(txtkulupid.Text));
             MessageBox.Show("Ders Kaydı Güncellendi", "Bilgi");
 
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

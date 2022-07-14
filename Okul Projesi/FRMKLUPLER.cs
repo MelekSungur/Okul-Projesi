@@ -21,7 +21,7 @@ namespace Okul_Projesi
        public  void listele()
         {
 
-            SqlDataAdapter da = new SqlDataAdapter("Select * from  TBLKULUPLER ", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM  TBLKULUPLER", baglanti);
         DataTable dt = new DataTable();
         da.Fill(dt);
             dataGridView1.DataSource = dt;
